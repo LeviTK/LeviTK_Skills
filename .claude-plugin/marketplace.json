@@ -1,0 +1,15 @@
+{
+  "name": "LeviTK_Skills",
+  "owner": {
+    "name": "LeviTK",
+    "url": "https://github.com/LeviTK"
+  },
+  "plugins": [
+    {
+      "name": "levitk-skills",
+      "source": "./",
+      "description": "Agent Skills for LeviTK workflows.",
+      "version": "1.0.0"
+    }
+  ]
+}
