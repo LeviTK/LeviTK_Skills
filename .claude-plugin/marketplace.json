@@ -8,7 +8,7 @@
     {
       "name": "levitk-skills",
       "source": "./",
-      "description": "Agent Skills for LeviTK workflows.",
+      "description": "适用于 LeviTK 工作流的 Agent Skills。",
       "version": "1.0.0"
     }
   ]

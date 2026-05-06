@@ -1,49 +1,49 @@
-Agent Skills for LeviTK workflows.
+适用于 LeviTK 工作流的 Agent Skills 仓库。
 
-This repository follows the [Agent Skills specification](https://agentskills.io/specification). Skills are designed for agents that support `SKILL.md` discovery, including Claude Code, Codex CLI, OpenCode, and compatible coding agents.
+本仓库遵循 [Agent Skills 规范](https://agentskills.io/specification)。其中的技能面向支持 `SKILL.md` 发现机制的代理工具，包括 Claude Code、Codex CLI、OpenCode，以及其他兼容的编码代理。
 
-## Installation
+## 安装方式
 
-### Marketplace
+### 通过 Marketplace 安装
 
 ```text
 /plugin marketplace add LeviTK/LeviTK_Skills
 /plugin install levitk-skills@LeviTK_Skills
 ```
 
-### npx skills
+### 通过 npx skills 安装
 
 ```bash
 npx skills add git@github.com:LeviTK/LeviTK_Skills.git
 ```
 
-### Manually
+### 手动安装
 
 #### Claude Code
 
-Copy the repository contents into `/.claude` at your project root.
+将仓库内容复制到项目根目录下的 `/.claude`。
 
 #### Codex CLI
 
-Copy the `skills/` directory into `~/.codex/skills`.
+将 `skills/` 目录复制到 `~/.codex/skills`。
 
 #### OpenCode
 
-Clone the full repository into OpenCode's skills directory:
+将完整仓库克隆到 OpenCode 的技能目录中：
 
 ```bash
 git clone https://github.com/LeviTK/LeviTK_Skills.git ~/.opencode/skills/LeviTK_Skills
 ```
 
-Clone the full repository, not only the inner `skills/` directory, so metadata and future shared resources remain available.
+请克隆整个仓库，而不仅仅是内部的 `skills/` 目录，这样元数据和未来的共享资源才能一并保留。
 
-## Skills
+## 技能列表
 
-| Skill | Description |
-|-------|-------------|
-| [managing-heptabase](skills/managing-heptabase) | Search, read, analyze, and write Heptabase knowledge base content through available Heptabase tools or CLI workflows. |
+| 技能 | 说明 |
+|-------|------|
+| [managing-heptabase](skills/managing-heptabase) | 通过可用的 Heptabase 工具或 CLI 工作流，搜索、读取、分析并写入 Heptabase 知识库内容。 |
 
-## Repository layout
+## 仓库结构
 
 ```text
 LeviTK_Skills/
@@ -59,4 +59,4 @@ LeviTK_Skills/
 └── README.md
 ```
 
-Each skill lives in `skills/<skill-name>/SKILL.md`. Larger reference material should be placed under `skills/<skill-name>/references/` and linked from the skill file.
+每个技能都放在 `skills/<skill-name>/SKILL.md` 中。较大的参考资料应放在 `skills/<skill-name>/references/` 目录下，并从技能文件中进行链接。

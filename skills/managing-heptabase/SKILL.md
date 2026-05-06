@@ -1,54 +1,54 @@
 ---
 name: managing-heptabase
-description: Manages Heptabase knowledge base content by searching, reading, analyzing, creating, and updating cards, journals, tags, whiteboards, PDFs, and media cards. Use when the user asks to work with Heptabase, personal knowledge notes, journals, tags, whiteboards, AI Tutor content, or pasted Heptabase links.
+description: 通过搜索、读取、分析、创建和更新卡片、日记、标签、白板、PDF 与媒体卡片来管理 Heptabase 知识库内容。当用户要求处理 Heptabase、个人知识笔记、日记、标签、白板、AI Tutor 内容或粘贴的 Heptabase 链接时使用。
 ---
 
-# Managing Heptabase
+# 管理 Heptabase
 
-Use this skill to work with a user's Heptabase knowledge base through whichever Heptabase integration is available in the current agent environment.
+使用此技能，通过当前代理环境中可用的 Heptabase 集成方式来处理用户的 Heptabase 知识库。
 
-## Workflow
+## 工作流程
 
-1. Identify the target object type: card, journal, tag, whiteboard, PDF, media card, highlight, or AI Tutor content.
-2. Choose the narrowest available tool for the request:
-   - Use semantic search for topic discovery.
-   - Use exact object reads when the user provides a Heptabase link or object ID.
-   - Use journal range reads for date-based journal questions.
-   - Use tag or whiteboard listing tools when the user asks about organization.
-3. Read the full object content before summarizing, rewriting, extracting decisions, or making updates.
-4. For PDFs, search for relevant pages first, then fetch complete page ranges before producing detailed answers.
-5. When writing to Heptabase, confirm the destination implied by the user: new note card, existing card, today's journal, a specific date's journal, tag, or whiteboard.
-6. Keep edits scoped to the user's requested content. Do not reorganize unrelated cards, tags, or whiteboards unless explicitly asked.
-7. Report what was read or changed, and mention any objects that could not be found.
+1. 识别目标对象类型：卡片、日记、标签、白板、PDF、媒体卡片、高亮，或 AI Tutor 内容。
+2. 为请求选择最窄、最合适的可用工具：
+   - 用语义搜索发现相关主题。
+   - 当用户提供 Heptabase 链接或对象 ID 时，直接精确读取对象。
+   - 对基于日期的日记问题，使用日记区间读取工具。
+   - 当用户询问组织结构时，使用标签或白板列表工具。
+3. 在总结、改写、提取结论或执行更新之前，先读取对象的完整内容。
+4. 处理 PDF 时，先搜索相关页面，再拉取完整页码范围后再给出详细回答。
+5. 向 Heptabase 写入内容时，先确认用户意图中的目标位置：新笔记卡、已有卡片、今日日记、指定日期日记、标签或白板。
+6. 编辑范围只限于用户明确请求的内容。除非用户明确要求，不要重组无关的卡片、标签或白板。
+7. 说明已读取或已修改的内容，并标出未找到的对象。
 
-## Link handling
+## 链接处理
 
-When the user pastes a Heptabase URL:
+当用户粘贴 Heptabase URL 时：
 
-1. Extract the object identifier from the URL.
-2. Determine whether the URL points to a card, whiteboard, PDF, media card, journal, or another object type.
-3. Fetch the object directly when the environment provides a direct object-read tool.
-4. If direct fetching is unavailable, search by title, nearby text, or visible object metadata from the URL.
+1. 从 URL 中提取对象标识符。
+2. 判断该 URL 指向的是卡片、白板、PDF、媒体卡片、日记还是其他对象类型。
+3. 如果环境提供直接读取对象的工具，则直接获取该对象。
+4. 如果无法直接获取，则根据标题、附近文本或 URL 中可见的对象元数据进行搜索。
 
-## Writing guidelines
+## 写入准则
 
-- Prefer appending to journals instead of overwriting existing journal content.
-- For note cards, use clear Markdown with an H1 title on the first line when the tool expects it.
-- Preserve the user's language unless they ask for translation.
-- Separate blocks with blank lines for readability.
-- Do not include private tool logs, hidden reasoning, or unrelated search results in saved notes.
+- 优先向日记追加内容，而不是覆盖现有日记内容。
+- 写入笔记卡时，如果工具要求，请使用清晰的 Markdown，并在第一行写 H1 标题。
+- 除非用户要求翻译，否则保持用户原本使用的语言。
+- 各内容块之间用空行分隔，提升可读性。
+- 不要把私有工具日志、隐藏推理或无关搜索结果写入保存的笔记中。
 
-## Common tasks
+## 常见任务
 
-| Request | Recommended approach |
-|---------|----------------------|
-| “Search my Heptabase for X” | Run semantic or keyword search, then read the most relevant objects fully. |
-| “Summarize this card” | Fetch the full card or media transcript before summarizing. |
-| “What did I write last week?” | Retrieve the journal range for the requested dates. |
-| “Save this insight” | Create a new note card or append to today's journal, depending on the user's wording. |
-| “Find this in a PDF” | Search PDF content first, then fetch complete pages around the best matches. |
-| “Organize these notes” | Inspect the relevant tags or whiteboards before proposing or applying changes. |
+| 请求 | 推荐做法 |
+|------|----------|
+| “在我的 Heptabase 里搜索 X” | 运行语义搜索或关键词搜索，然后完整读取最相关的对象。 |
+| “总结这张卡片” | 在总结前先拉取完整卡片内容或媒体转录文本。 |
+| “我上周写了什么？” | 获取对应日期范围内的日记内容。 |
+| “保存这条洞察” | 根据用户措辞，创建新的笔记卡或追加到今日日记。 |
+| “在 PDF 里找这个内容” | 先搜索 PDF 内容，再拉取最佳匹配附近的完整页面。 |
+| “整理这些笔记” | 在提出或应用修改前，先检查相关标签或白板。 |
 
-## Tooling reference
+## 工具参考
 
-See [TOOLING.md](references/TOOLING.md) for integration-specific guidance and fallback options.
+集成方式相关的指引与兜底方案见 [TOOLING.md](references/TOOLING.md)。
