@@ -1,7 +1,7 @@
 {
   "name": "levitk-skills",
   "version": "1.0.0",
-  "description": "适用于 LeviTK 工作流的 Agent Skills，包含 Heptabase 知识管理能力。",
+  "description": "适用于 LeviTK 工作流的 Agent Skills，包含 Heptabase CLI 中文技能。",
   "author": {
     "name": "LeviTK",
     "url": "https://github.com/LeviTK"
@@ -12,6 +12,7 @@
     "agent-skills",
     "skills",
     "heptabase",
-    "knowledge-management"
+    "cli",
+    "chinese"
   ]
 }
