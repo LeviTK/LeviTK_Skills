@@ -42,6 +42,7 @@ git clone https://github.com/LeviTK/LeviTK_Skills.git ~/.opencode/skills/LeviTK_
 | 技能 | 说明 |
 |-------|------|
 | [heptabase-cli-cn](skills/heptabase-cli-cn) | 使用 Heptabase CLI 管理笔记、日记、标签、卡片、白板和 AI Tutor 内容的中文技能。 |
+| [heptabase-mcp-cn](skills/heptabase-mcp-cn) | 使用 Heptabase MCP 工具搜索、读取、分析和写入 Heptabase 内容的中文技能。 |
 
 ## 仓库结构
 
@@ -51,8 +52,13 @@ LeviTK_Skills/
 │   ├── marketplace.json
 │   └── plugin.json
 ├── skills/
-│   └── heptabase-cli-cn/
-│       └── SKILL.md
+│   ├── heptabase-cli-cn/
+│   │   └── SKILL.md
+│   └── heptabase-mcp-cn/
+│       ├── SKILL.md
+│       └── references/
+│           ├── Hep_Markdown.md
+│           └── heptabase-mcp.md
 ├── LICENSE
 └── README.md
 ```
